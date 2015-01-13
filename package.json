@@ -1,0 +1,26 @@
+{
+  "name": "IISNode",
+  "version": "0.0.1",
+  "description": "Setting up IISNode ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angryCutlet/IISNode.git"
+  },
+  "keywords": [
+    "testing",
+    "iisnode"
+  ],
+  "author": "tadas ruginis",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/angryCutlet/IISNode/issues"
+  },
+  "homepage": "https://github.com/angryCutlet/IISNode",
+  "dependencies": {
+    "express": "^4.10.8"
+  }
+}
