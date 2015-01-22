@@ -1,0 +1,27 @@
+{
+  "name": "IISNode",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angryCutlet/IISNode",
+  "authors": [
+    "Tadas Ruginis <angryCutlet@gmail.com>"
+  ],
+  "description": "IISNode testing",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.10",
+    "angular-material": "~0.6.1",
+    "angular-route": "~1.3.10",
+    "material-design-icons": "~1.0.1"
+  }
+}

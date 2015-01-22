@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en" ng-app="iisNodeTest">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>IISNode Test</title>
 
+    <!-- Angular Material CSS -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/angular-material/themes/red-theme.css">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body>
-<h1>IISNode static file test</h1>
+
+<body ng-controller="MainController" md-theme="red">
+
+<header>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button aria-label="Menu" ng-click="openLeftMenu()">
+                <md-icon
+                        icon="/bower_components/material-design-icons/navigation/svg/production/ic_menu_24px.svg"></md-icon>
+            </md-button>
+            <h2>Property Portal</h2>
+        </div>
+    </md-toolbar>
+
+
+</header>
+
+<div layout="row">
+    <md-sidenav md-component-id="left" class="md-sidenav-left md-shadow-bottom-z-2">
+        <md-toolbar layout="row">
+            <h3 class="md-toolbar-tools">Menu</h3>
+            <md-button aria-label="Close Menu" ng-click="openLeftMenu()">
+                <md-icon
+                        icon="/bower_components/material-design-icons/navigation/svg/production/ic_close_24px.svg"></md-icon>
+            </md-button>
+        </md-toolbar>
+        <md-content layout="column" class="md-padding" layout-align="top center">
+
+            <md-button class="md-primary">Button</md-button>
+            <md-button class="md-primary">Button</md-button>
+            <md-button class="md-primary">Button</md-button>
+            <md-button class="md-primary">Button</md-button>
+            <md-button class="md-primary">Button</md-button>
+        </md-content>
+    </md-sidenav>
+</div>
+
+<div>
+    <md-content style="height: 1000px;">
+        <!-- Table one -->
+        <section>
+            <md-subheader class="md-primary">Unread Messages</md-subheader>
+            <md-list layout="column">
+                <md-item ng-repeat="url in imgUrls track by $index">
+                    <md-item-content>
+                        <div class="md-tile-left">
+                            <img ng-src="{{url}}" alt="{{url}}" class="face">
+                        </div>
+                        <div class="md-tile-content">
+                            <h3>What goes here</h3>
+                            <h4>Who</h4>
+                            <h4>Row 1</h4>
+                            <h4>Row 2</h4>
+                        </div>
+                    </md-item-content>
+                    <md-divider inset></md-divider>
+                </md-item>
+            </md-list>
+        </section>
+        <!-- Table two -->
+        <section>
+            <md-subheader class="md-primary">This is the header for table two</md-subheader>
+            <md-list layout="column">
+                <md-item ng-repeat="url in imgUrls track by $index" flex="100">
+                    <div layout="row">
+                        <!-- Column 1 -->
+                        <md-list flex="5" layout="column">
+                            <md-item>
+                                Unit
+                            </md-item>
+                            <md-item>
+                                10
+                            </md-item>
+                        </md-list>
+                        <!-- Column 2 -->
+                        <md-list flex="15" layout="column">
+                            <md-item>
+                                <b>American general finanace</b>
+                            </md-item>
+                            <md-item>
+                                64865132
+                            </md-item>
+                            <md-item>
+                                begin date: 9/12/1233
+                            </md-item>
+                            <md-item>
+                                end date: 1/32/1233s
+                            </md-item>
+                        </md-list>
+                        <!-- Column 3 -->
+                        <md-list flex="5" layout="column">
+                            <md-item>
+                                Item 1
+                            </md-item>
+                            <md-item>
+                                Item 2
+                            </md-item>
+                            <md-item>
+                                Item 3
+                            </md-item>
+                            <md-item>
+                                Item 4
+                            </md-item>
+                        </md-list>
+                        <!-- Column 4 -->
+                        <md-list flex="5" layout="column">
+                            <md-item>
+                                Item 1
+                            </md-item>
+                            <md-item>
+                                Item 2
+                            </md-item>
+                            <md-item>
+                                Item 3
+                            </md-item>
+                            <md-item>
+                                Item 4
+                            </md-item>
+                        </md-list>
+                    </div>
+                </md-item>
+            </md-list>
+        </section>
+    </md-content>
+</div>
+
+<!-- Angular Material Dependecies -->
+<script src="bower_components/hammerjs/hammer.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="controllers.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
 </body>
 </html>
